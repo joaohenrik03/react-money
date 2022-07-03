@@ -16,7 +16,7 @@ export function Header({ onOpenNewTransactionModal }: HeaderProps) {
                         alt="Logo"
                     />
                     <span>React Money</span>
-                    </div>
+                </div>
                 <button type="button" onClick={onOpenNewTransactionModal}>
                     Nova transação
                 </button>
