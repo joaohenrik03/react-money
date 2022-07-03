@@ -7,7 +7,7 @@ type Transaction = {
     amount: number;
     category: string;
     type: string;
-    createAt: string;
+    createdAt: string;
 }
 
 type TransactionInput = {
@@ -39,7 +39,7 @@ export function TransactionsProvider({ children }: TransactionsProviderProps) {
     async function createTransaction(transactionInput: TransactionInput) {
         const response = await api.post('/transactions', {
             ...transactionInput, 
-            createAt: new Date()
+            createdAt: new Date()
         });
 
         const { transaction } = response.data;
